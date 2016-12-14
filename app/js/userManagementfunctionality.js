@@ -87,6 +87,30 @@ function loadLoginPW(){
     console.log(loginPW);
 }
 
+<<<<<<< HEAD
+=======
+function loadUser(){
+    userdata[0] = firstName;
+    userdata[1] = lastName;
+    
+    var editEmail = email.replace("." , "/");
+    userdata[2] = editEmail;
+    console.log(editEmail + "email");
+    
+    userdata[3] = password;
+    userdata[4] = institution;
+    
+    curUser = '{'
+       +'"Firstname":' +'"' + userdata[0] + '"' +', '
+       +'"LastName":' +'"' +userdata[1] + '"' +', '
+       +'"Email":' +'"' +userdata[2] + '"' +', '
+       +'"Password":' +'"' +userdata[3] + '"' +', '
+       +'"Institution":' +'"' +userdata[4] + '"' +', '
+       +'"Projects":' +'"'  + '"'
+       +'"Institution":' +'"' +userdata[4] + '"'
+       +'}';
+}
+>>>>>>> origin/Beta
 
 
 

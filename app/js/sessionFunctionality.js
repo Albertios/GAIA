@@ -1,5 +1,6 @@
 "use strict";
 
+<<<<<<< HEAD
 /*
  * every time a window is loaded this checks what to do.
  */
@@ -56,19 +57,60 @@ window.onload = function () {
  * sets the cookie to the logged in user
  */
 function setUserCookie() {
+=======
+window.onload = function(){
+    if(document.cookie.length != 0){
+        
+        var path = window.location.pathname;
+        switch(path){
+            case "/home.html" :
+                var userArray = document.cookie.split("=");
+                var userJSON = JSON.parse(userArray[1]);
+                document.getElementById("profilSymb").textContent = userJSON.data.Firstname;
+                break;
+                
+            case "/work.html":
+                var userArray = document.cookie.split("=");
+                var userJSON = JSON.parse(userArray[1]);
+                document.getElementById("workProfilSymb").textContent = userJSON.data.Firstname;
+                break;
+                
+            case "/profiledit.html":
+                var userArray = document.cookie.split("=");
+                var userJSON = JSON.parse(userArray[1]);
+                document.getElementById("editProfilSymb").textContent = userJSON.data.Firstname;
+                break;
+            case "/impressum.html":
+                var userArray = document.cookie.split("=");
+                var userJSON = JSON.parse(userArray[1]);
+                document.getElementById("imprProfilSymb").textContent = userJSON.data.Firstname;
+                break;
+                
+        }
+    }
+    
+}
+
+function setUserCookie(){
+>>>>>>> origin/Beta
     var userLogin = loginUser;
     console.log(userLogin);
     document.cookie = "User=" + userLogin;
 }
 
+<<<<<<< HEAD
 /*
  * sets the cookie to "" and loads the login&regitry.html
  */
 function logout() {
+=======
+function logout(){
+>>>>>>> origin/Beta
     document.cookie = "";
     window.location.href = "login&registry.html";
 }
 
+<<<<<<< HEAD
 
 
 
@@ -89,3 +131,15 @@ function createTree() {
         });
     });
 }
+=======
+function deleteUser(){
+    GAIA.updateOne(
+   { "favorites.artist": "Picasso" },
+   {
+     $set: { "favorites.food": "pie", type: 3 },
+     $currentDate: { lastModified: true }
+   }
+)
+}
+
+>>>>>>> origin/Beta

@@ -6,17 +6,40 @@ var jsonObj;
 var allUsers;
 var noUsers;
 
+<<<<<<< HEAD
 var loginUser;
 
 
 
 
+=======
+
+var loginUser;
+
+
+/**
+ * saves the Geoobject to the database
+ */
+function saveRegister() {
+
+    loadUser();
+    newUser = curUser;
+
+
+    var content = JSON.parse(newUser); //JSON.parse(temp);
+
+
+
+    //var url = $('#db-url').val() + '/getFeatures';
+    //var url = http://localhost:8080 + '/getFeatures';
+>>>>>>> origin/Beta
 
 
 
 
 
 
+<<<<<<< HEAD
 
 /**
  * saves a JSON object to the Database. The Object is a new User.
@@ -28,11 +51,22 @@ function saveRegister() {
     newUser = curUser;
 
     var content = JSON.parse(newUser);
+=======
+    //console.log(JSON.parse(content));
+
+    console.log(content + "das ist neu");
+>>>>>>> origin/Beta
     
     //hier statt name email denke ich
     if (name != undefined && content != null) {
 
         var url = 'http://localhost:8080' + '/addFeature?name=' + email;
+<<<<<<< HEAD
+=======
+
+        //var url = $('#db-url').val() + '/getFeatures'; das waere richtig
+>>>>>>> origin/Beta
+
 
         // perform post ajax
         $.ajax({
@@ -75,25 +109,58 @@ function loadFromDB() {
             $('#tableDBContents').empty();
 
             
+<<<<<<< HEAD
             loadLoginName();    // aus userManagementfunctionality
             loadLoginPW();      // aus userManagementfunctionality
+=======
+            loadLoginName();
+            loadLoginPW();
+
+
+
+            //console.log(content);
+            //var jsonobj =  content[41].data;
+            //JSON.parse(jsonobj);
+            //console.log(jsonobj.Password);  
+>>>>>>> origin/Beta
 
             
             for(var i=0; i<= content.length;i++){
                 
                 if(content[i] != undefined && content[i].data != undefined && content[i].data.Email != undefined){
                     
+<<<<<<< HEAD
                 //unnötig wenn nur name des features gecheckt wird
+=======
+
+                //unnötig wenn nur name des features gecheckt wird
+
+                    //unnötig wenn nur name des features gecheckt wird
+
+>>>>>>> origin/Beta
                 var checkEmail = content[i].data.Email.replace("/" , ".");
                     
                 if(content[i] != undefined && checkEmail == loginName){
                       if(content[i].data.Password == loginPW){
                           console.log("accsess");
+<<<<<<< HEAD
                           
                           loginUser = JSON.stringify(content[i]);
                           console.log(loginUser);
                           setUserCookie();                          // aus sessionFunctionality
                           window.location.href = "/home.html";
+=======
+
+                          console.log(content[i]);
+                          loginUser = JSON.stringify(content[i]);
+                          console.log(loginUser);
+                          setUserCookie();
+                          window.location.href = "/home.html";
+
+                          access = true;
+                          return true;
+
+>>>>>>> origin/Beta
                       }else{
                           console.log("Wrong password!");
                       }             
