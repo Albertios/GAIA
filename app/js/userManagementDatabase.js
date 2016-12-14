@@ -7,12 +7,15 @@ var allUsers;
 var noUsers;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 var loginUser;
 
 
 
 
 =======
+=======
+>>>>>>> origin/Beta
 
 var loginUser;
 
@@ -62,10 +65,14 @@ function saveRegister() {
 
         var url = 'http://localhost:8080' + '/addFeature?name=' + email;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/Beta
 
         //var url = $('#db-url').val() + '/getFeatures'; das waere richtig
 >>>>>>> origin/Beta
+
 
 
         // perform post ajax
@@ -122,6 +129,9 @@ function loadFromDB() {
             //var jsonobj =  content[41].data;
             //JSON.parse(jsonobj);
             //console.log(jsonobj.Password);  
+<<<<<<< HEAD
+>>>>>>> origin/Beta
+=======
 >>>>>>> origin/Beta
 
             
@@ -130,13 +140,19 @@ function loadFromDB() {
                 if(content[i] != undefined && content[i].data != undefined && content[i].data.Email != undefined){
                     
 <<<<<<< HEAD
+<<<<<<< HEAD
                 //unnötig wenn nur name des features gecheckt wird
 =======
+=======
+>>>>>>> origin/Beta
 
                 //unnötig wenn nur name des features gecheckt wird
 
                     //unnötig wenn nur name des features gecheckt wird
 
+<<<<<<< HEAD
+>>>>>>> origin/Beta
+=======
 >>>>>>> origin/Beta
                 var checkEmail = content[i].data.Email.replace("/" , ".");
                     
@@ -144,12 +160,15 @@ function loadFromDB() {
                       if(content[i].data.Password == loginPW){
                           console.log("accsess");
 <<<<<<< HEAD
+<<<<<<< HEAD
                           
                           loginUser = JSON.stringify(content[i]);
                           console.log(loginUser);
                           setUserCookie();                          // aus sessionFunctionality
                           window.location.href = "/home.html";
 =======
+=======
+>>>>>>> origin/Beta
 
                           console.log(content[i]);
                           loginUser = JSON.stringify(content[i]);
@@ -160,6 +179,9 @@ function loadFromDB() {
                           access = true;
                           return true;
 
+<<<<<<< HEAD
+>>>>>>> origin/Beta
+=======
 >>>>>>> origin/Beta
                       }else{
                           console.log("Wrong password!");

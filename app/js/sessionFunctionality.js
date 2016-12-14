@@ -1,6 +1,7 @@
 "use strict";
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /*
  * every time a window is loaded this checks what to do.
  */
@@ -58,6 +59,8 @@ window.onload = function () {
  */
 function setUserCookie() {
 =======
+=======
+>>>>>>> origin/Beta
 window.onload = function(){
     if(document.cookie.length != 0){
         
@@ -92,12 +95,16 @@ window.onload = function(){
 }
 
 function setUserCookie(){
+<<<<<<< HEAD
+>>>>>>> origin/Beta
+=======
 >>>>>>> origin/Beta
     var userLogin = loginUser;
     console.log(userLogin);
     document.cookie = "User=" + userLogin;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 /*
  * sets the cookie to "" and loads the login&regitry.html
@@ -106,10 +113,14 @@ function logout() {
 =======
 function logout(){
 >>>>>>> origin/Beta
+=======
+function logout(){
+>>>>>>> origin/Beta
     document.cookie = "";
     window.location.href = "login&registry.html";
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -132,6 +143,8 @@ function createTree() {
     });
 }
 =======
+=======
+>>>>>>> origin/Beta
 function deleteUser(){
     GAIA.updateOne(
    { "favorites.artist": "Picasso" },
@@ -142,4 +155,7 @@ function deleteUser(){
 )
 }
 
+<<<<<<< HEAD
+>>>>>>> origin/Beta
+=======
 >>>>>>> origin/Beta
