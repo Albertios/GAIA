@@ -8,6 +8,7 @@ var noUsers;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 var loginUser;
 
 
@@ -17,25 +18,9 @@ var loginUser;
 =======
 >>>>>>> origin/Beta
 
+=======
+>>>>>>> master
 var loginUser;
-
-
-/**
- * saves the Geoobject to the database
- */
-function saveRegister() {
-
-    loadUser();
-    newUser = curUser;
-
-
-    var content = JSON.parse(newUser); //JSON.parse(temp);
-
-
-
-    //var url = $('#db-url').val() + '/getFeatures';
-    //var url = http://localhost:8080 + '/getFeatures';
->>>>>>> origin/Beta
 
 
 
@@ -43,7 +28,22 @@ function saveRegister() {
 
 
 <<<<<<< HEAD
+    //var url = $('#db-url').val() + '/getFeatures';
+    //var url = http://localhost:8080 + '/getFeatures';
+>>>>>>> origin/Beta
 
+=======
+>>>>>>> master
+
+
+
+
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> master
 /**
  * saves a JSON object to the Database. The Object is a new User.
  */
@@ -52,6 +52,7 @@ function saveRegister() {
     loadUser();
     
     newUser = curUser;
+<<<<<<< HEAD
 
     var content = JSON.parse(newUser);
 =======
@@ -59,10 +60,15 @@ function saveRegister() {
 
     console.log(content + "das ist neu");
 >>>>>>> origin/Beta
+=======
+
+    var content = JSON.parse(newUser);
+>>>>>>> master
     
     //hier statt name email denke ich
     if (name != undefined && content != null) {
 
+<<<<<<< HEAD
         var url = 'http://localhost:8080' + '/addFeature?name=' + email;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -74,6 +80,9 @@ function saveRegister() {
 >>>>>>> origin/Beta
 
 
+=======
+        var url = 'http://10.6.4.6' + '/addFeature?name=' + email;
+>>>>>>> master
 
         // perform post ajax
         $.ajax({
@@ -83,7 +92,7 @@ function saveRegister() {
             timeout: 5000,
             success: function (data, textStatus) {
                 console.log(data);
-                console.log("succsess");
+                console.log("success");
             },
             error: function (xhr, textStatus, errorThrown) {
                 console.log("failed to save to db");
@@ -105,7 +114,7 @@ function saveRegister() {
  * if the user entered the correct email and password the home.html is loaded.
  */
 function loadFromDB() {
-    var url = 'http://localhost:8080' + '/getFeatures';
+    var url = 'http://10.6.4.6' + '/getFeatures';
     
     $.ajax({
         type: 'GET',
@@ -116,6 +125,7 @@ function loadFromDB() {
             $('#tableDBContents').empty();
 
             
+<<<<<<< HEAD
 <<<<<<< HEAD
             loadLoginName();    // aus userManagementfunctionality
             loadLoginPW();      // aus userManagementfunctionality
@@ -133,12 +143,17 @@ function loadFromDB() {
 >>>>>>> origin/Beta
 =======
 >>>>>>> origin/Beta
+=======
+            loadLoginName();    // aus userManagementfunctionality
+            loadLoginPW();      // aus userManagementfunctionality
+>>>>>>> master
 
             
             for(var i=0; i<= content.length;i++){
                 
                 if(content[i] != undefined && content[i].data != undefined && content[i].data.Email != undefined){
                     
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 //unnötig wenn nur name des features gecheckt wird
@@ -154,10 +169,14 @@ function loadFromDB() {
 >>>>>>> origin/Beta
 =======
 >>>>>>> origin/Beta
+=======
+                //unnötig wenn nur name des features gecheckt wird
+>>>>>>> master
                 var checkEmail = content[i].data.Email.replace("/" , ".");
                     
                 if(content[i] != undefined && checkEmail == loginName){
                       if(content[i].data.Password == loginPW){
+<<<<<<< HEAD
                           console.log("accsess");
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -171,10 +190,15 @@ function loadFromDB() {
 >>>>>>> origin/Beta
 
                           console.log(content[i]);
+=======
+                          console.log("access");
+                          
+>>>>>>> master
                           loginUser = JSON.stringify(content[i]);
                           console.log(loginUser);
-                          setUserCookie();
+                          setUserCookie();                          // aus sessionFunctionality
                           window.location.href = "/home.html";
+<<<<<<< HEAD
 
                           access = true;
                           return true;
@@ -183,6 +207,8 @@ function loadFromDB() {
 >>>>>>> origin/Beta
 =======
 >>>>>>> origin/Beta
+=======
+>>>>>>> master
                       }else{
                           console.log("Wrong password!");
                       }             
@@ -217,4 +243,8 @@ function loadFromDB() {
 function gutenTag(){
     console.log(allUsers);
 }
+<<<<<<< HEAD
 */
+=======
+*/
+>>>>>>> master

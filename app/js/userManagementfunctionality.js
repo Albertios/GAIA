@@ -88,6 +88,7 @@ function loadLoginPW(){
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 function loadUser(){
     userdata[0] = firstName;
@@ -111,6 +112,8 @@ function loadUser(){
        +'}';
 }
 >>>>>>> origin/Beta
+=======
+>>>>>>> master
 
 
 

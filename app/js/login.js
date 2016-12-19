@@ -6,7 +6,11 @@ $(function () {
     setInterval(function () {
         x -= 1;
         $('body').css('background-position', x + 'px 0');
+<<<<<<< HEAD
          console.log();
+=======
+        
+>>>>>>> master
     }, 50);
 })
 
@@ -38,7 +42,10 @@ $("input").focus(function () {
             body.css("backgroundPosition", x + 'px' + ' ' + y + 'px');
             // y--;  
             x--;
+<<<<<<< HEAD
             console.log( x);
+=======
+>>>>>>> master
           
             //if you need to scroll image horizontally -  
             // uncomment x and comment y  
@@ -46,7 +53,11 @@ $("input").focus(function () {
             body.css("backgroundPosition", x + 'px' + ' ' + y + 'px');
             y--;
             // x--; 
+<<<<<<< HEAD
             console.log( y);
+=======
+            
+>>>>>>> master
 
         
         }
@@ -61,4 +72,8 @@ $("input").focus(function () {
         }
     }, 50);
 
+<<<<<<< HEAD
 })(jQuery);
+=======
+})(jQuery);
+>>>>>>> master
